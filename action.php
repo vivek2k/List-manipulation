@@ -1,5 +1,5 @@
 <html>
-    <body style="margin:100px">
+    <body style="margin:100px;background-color:#F5F5F5">
         <?php
             $l1 = $_POST['list1'];
             // echo "$l1";
@@ -39,34 +39,16 @@
             echo "<br>";
             // echo $size2;
             $strRem = strval($list[3]); 
-            echo strlen($strRem);
+            // echo strlen($strRem);
             $strAdd = strval($list[2]); 
-            echo strlen($strAdd);
-            echo $strAdd;
+            // echo strlen($strAdd);
+            // echo $strAdd;
             // echo $listTemp;
             // echo gettype($list);
         ?>
 
-        <form>
-        To Remove : <textarea name="addList" form="stockList" cols="30" rows="10" wrap="hard">
-        <?php 
-            for($i=0;$i<strlen($strRem);$i=$i+1) {
-                if($strRem[$i]=='\''||$strRem[$i]=='{'|$strRem[$i]=='}'||$strRem[$i]==',') {
-
-                    continue;
-                }
-                else if($strAdd[$i]== ' ') {
-                    echo "\n";
-                }
-                else {
-                    echo $strRem[$i];
-
-                }  
-            }
-
-        ?>
-        </textarea>    
-        To Add : <textarea name="removeList" form="stockList" cols="30" rows="10" wrap="hard">
+        <form style="height:500px;width:700px">
+        <p style="color:Black;font-size:28px;">To Add :</p><textarea name="removeList" form="stockList" cols="30" rows="10" wrap="hard" style="">
         <?php 
             for($i=0;$i<strlen($strAdd);$i=$i+1) {
                 if($strAdd[$i]=='\''||$strAdd[$i]=='{'|$strAdd[$i]=='}'||$strAdd[$i]==',') {
@@ -82,5 +64,22 @@
             }
         ?>
         </textarea>    
+        <p style="color:Black;font-size:28px;;">To Remove : </p><textarea name="addList" form="stockList" cols="30" rows="10" wrap="hard" style="">
+        <?php 
+            for($i=0;$i<strlen($strRem);$i=$i+1) {
+                if($strRem[$i]=='\''||$strRem[$i]=='{'|$strRem[$i]=='}'||$strRem[$i]==',') {
+                    continue;
+                }
+                else if($strRem[$i]== ' ') {
+                    echo "\n";
+                }
+                else {
+                    echo $strRem[$i];
+
+                }  
+            }
+        ?>
+        </textarea>    
+        
     </body>
 </html>
