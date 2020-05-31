@@ -1,24 +1,56 @@
 <html>
     <head>
-        <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <title> 
-            List Operations!!!! 
+            List Stuff
         </title>
     </head>
-    <body style="margin-top:10%;margin-left :30%;background-color: #F5F5F5;;">
-       <div >
-            <form action="./action_copy.php" method="POST" id="stockList" style="height:400px;width:600px;">
-                List 1 : <textarea name="list1" form="stockList" cols="30" rows="10" wrap="hard"></textarea>
-                List 2 : <textarea name="list2" form="stockList" cols="30" rows="10" wrap="hard"></textarea>
-                <br style="line-height: 10">
-                <br>
-                <input type="submit" style="margin-left:35%;height:50px;width:100px;">
-            </form>    
+    <body style="background-color: #F5F5F5;margin-top: 15px;">
+        <div >
+            <p class="header"> List comparator </p>
         </div>
-        <div>
-            <span> Created by Vivekanandan. </span>
-            <a href="https://github.com/vivek2k">Github</a>
+        <!-- <div class="instructions" >
+            <span>
+                Instructions to Use:<br>
+                1. Enter yesterday's data in list 1.<br>
+                2. Enter Today's data in list 2.<br>
+                3. click submit button.
+            </span>
+        <div> -->
+        <div class="container border" style="height: fit-content;width: fit-content;">
+        <div class="row">
+            <div class="col-6">
+                <p >Enter yesterday's data here</p>
+            </div>
+            <div class="col-6">
+                <p >Enter today's data in here</p>
+            </div>
+        </div>
+        <form action="./action.php" method="POST" id="stockList" style="height:auto;width:auto;">
+        
+            <div class="row">
+                <div class="col"><p class="ctm-font">List 1 : </p><textarea name="list1" form="stockList" cols="30" rows="10" wrap="hard"></textarea>
+                </div>
+                <div class="col"><p class="ctm-font">List 2 : </p><textarea name="list2" form="stockList" cols="30" rows="10" wrap="hard"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <br>
+                    <input type="submit" value="compare " style="float:right;height:50px;width:100px;">
+                </div>        
+        </form>
+                </div>
+            </div>
+        </div>
+        <div style="float:right;position:absolute;bottom:10px;right:10px">
+            <span> Created by Vivekanandan. </span><br>
+            <a style="float:right" href="https://github.com/vivek2k">Github</a>
+            <br>
+            <a style="float:right" href="https://www.instagram.com/vivekanandan._.mariappan/">Instagram</a>
+
         </div>
     </body>
 </html> 
